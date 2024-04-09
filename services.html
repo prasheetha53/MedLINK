@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find A Doctor | MedLINK</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="app.js"></script>
+<nav> 
+    <div class="logo">MedLINK</div> 
+        <div class="nav-items"> <a href="index.html">Home</a> <a href="services.html">Services</a> <a href="track.html">Track</a> <a href="about.html">About</a> 
+    </div> 
+</nav>
+
+<section class="find-doctor">
+    <div class="find-doctor-container">
+        <div class="find-doctor-illustration">
+            <img src="C:\Users\Prasheetha\OneDrive\Desktop\MedLINK\Doctors-bro.svg" alt="Find A Doctor illustration">
+        </div>
+        <div class="find-doctor-content">
+            <h1>Find Nearest Doctor</h1><br>
+            <p><em>Connecting You to Expert Care</em></p><br>
+            <form class="find-doctor-form">
+                <div class="form-field">
+                    <label for="preferred-location">Preferred Location/Pincode:</label>
+                    <input type="text" id="preferred-location" name="preferred-location" placeholder="Enter pincode">
+                </div>
+                <div class="form-field">
+                    <label for="select-date">Select Date:</label>
+                    <input type="date" id="select-date" name="select-date">
+                </div>
+                <div class="form-field">
+                    <label for="select-time">Preferred Time:</label>
+                    <input type="time" id="select-time" name="select-time">
+                </div>
+                <div class="form-field">
+                    <label for="select-speciality">Select Speciality:</label>
+                    <select id="select-speciality" name="select-speciality">
+                        <option value="cardiology">Cardiology</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="ent">ENT</option>
+                        <option value="general-physician">General Physician</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="obstetrics-gynaecology">Obstetrics & Gynaecology</option>
+                        <option value="orthopaedics">Orthopaedics</option>
+                        <option value="paediatrics">Paediatrics</option>
+                    </select>
+                </div>
+                <button type="submit" class="search-location-btn">Search location</button>
+                <button type="submit">Submit and Confirm</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="book-online-consultation">
+    <div class="book-online-consultation-container">
+        <div class="book-online-consultation-content">
+            <h1>Book an Online Consultation</h1><br>
+            <p><em>Connect with top doctors for expert advice and treatment</em></p><br>
+            <form class="find-doctor-form">
+                <div class="form-field">
+                    <label for="select-date">Select Date:</label>
+                    <input type="date" id="select-date" name="select-date">
+                </div>
+                <div class="form-field">
+                    <label for="select-time">Preferred Time:</label>
+                    <input type="time" id="select-time" name="select-time">
+                </div>
+                <div class="form-field">
+                    <label for="select-speciality">Select Speciality:</label>
+                    <select id="select-speciality" name="select-speciality">
+                        <option value="cardiology">Cardiology</option>
+                        <option value="dermatology">Dermatology</option>
+                        <option value="ent">ENT</option>
+                        <option value="general-physician">General Physician</option>
+                        <option value="neurology">Neurology</option>
+                        <option value="obstetrics-gynaecology">Obstetrics & Gynaecology</option>
+                        <option value="orthopaedics">Orthopaedics</option>
+                        <option value="paediatrics">Paediatrics</option>
+                    </select>
+                </div>
+                <button type="submit">Submit and Confirm</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<section class="find-volunteer">
+    <div class="find-volunteer-container">
+        <div class="find-volunteer-content">
+            <h1>Find A Volunteer To Help You Out</h1><br>
+            <form class="find-volunteer-form">
+                <div class="form-field">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" placeholder="Enter address">
+                </div>
+                <div class="form-field">
+                    <label for="type">Type of Help:</label>
+                    <input type="text" id="type" name="type" placeholder="Enter type">
+                </div>
+                <div class="form-field">
+                    <label for="type-of-help">Type of help needed:</label>
+                    <input type="text" id="type-of-help" name="type-of-help" placeholder="Enter type of help">
+                </div>
+                <div class="form-field">
+                    <label for="availability-needed">Availability needed:</label>
+                    <input type="date" id="availability-needed" name="availability-needed">
+                </div>
+                <div class="form-field">
+                    <label for="preferred-time">Preferred Time:</label>
+                    <input type="time" id="preferred-time" name="preferred-time">
+                </div>
+                <button type="submit" class="search-location-btn">Search location</button>
+                <button type="submit">Submit and Confirm</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-content">
+            <h2 class="footer-logo">MedLINK</h2>
+            <p class="footer-text">
+                <strong>Contact us:</strong><br>
+                Phone: 555-555-5555<br>
+                Email: <a href="mailto:info@medlink.com">info@medlink.com</a><br>
+                Address: 1234 MedLINK Way, Anytown USA
+            </p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
