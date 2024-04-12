@@ -38,8 +38,12 @@ nav a {
 }
 
 nav a:hover {
-    color: hotpink;
+    color: #2a60c8;
 }
+
+.nav-items { display: flex; justify-content: space-between; align-items: center; }
+
+.sign-in-icon { margin-left: 1.5rem; }
 
 .hero-container {
     display: grid;
@@ -375,6 +379,85 @@ button:hover {
     color: hotpink;
 }
 
+.sign-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120vh;
+    background: #2a60c8;
+}
+
+.sign-in-icon {
+    width: 10%;
+    height: auto;
+}
+
+.sign-in-content {
+    max-width: 700px; margin: 2rem auto; padding: 2rem; background-color: #ffe6e6; border-radius: 30px; box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1); 
+}
+
+.sign-in-form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.sign-in-form .form-field {
+    margin-bottom: 20px;
+}
+
+.sign-in-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sign-in-form input, .sign-in-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.sign-in-form button[type="submit"] {
+    padding: 10px 15px;
+    background-color: #000;
+    color: hotpink;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-form button[type="submit"]:hover {
+    background-color: #fff;
+    color: hotpink;
+}
+
+login-container { display: flex; justify-content: center; align-items: center; height: 150vh; background: #2a60c8; }
+
+.login-content { max-width: 700px; margin: 2rem auto; padding: 2rem; background-color:#ffe6e6; border-radius: 30px; box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.1); }
+
+.login-form { display: grid; grid-template-columns: repeat(1, 1fr); grid-gap: 20px; align-items: center; margin-top: 2rem; }
+
+.login-form .form-field { margin-bottom: 20px; }
+
+.login-form h2 { text-align: center; margin-bottom: 1rem; }
+
+.login-form input, .login-form textarea { width: 100%; padding: 12px 20px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; resize: none; margin-bottom: 1rem; }
+
+.maps.body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    width: 100%;
+    height: 100vh;
+}
+
 /* Responsive layout - makes the menu and the text responsive */
 @media screen and (max-width: 1200px) {
     .find-doctor-container,
@@ -405,22 +488,24 @@ button:hover {
     .find-volunteer-form button[type="submit"] {
         padding: 10px 15px; /* Adjust button padding for smaller screens */
     }
-    
-    health-tracking-container {
-        grid-template-columns: 1fr;
+
+    /* Add period before the selector */
+    .health-tracking-container {
+        position: relative; /* Set position to relative */
+        overflow: hidden; /* Hide overflow to prevent content from overflowing */
     }
 
-    .health-tracking-content {
-        align-items: center;
+    /* Properly nest the styles within the media query */
+    .health-tracking-container .health-tracking-illustration {
+        position: absolute; /* Position the illustration absolutely */
+        top: 0; /* Position the illustration at the top */
+        right: 0; /* Position the illustration at the right */
+        z-index: -1; /* Move the illustration behind other content */
     }
 
-    .health-tracking-illustration {
-        order: -1;
-        text-align: center; /* Center align images */
-    }
-
-    .health-tracking-illustration img {
-        width: 80%; /* Adjust image size for smaller screens */
+    .health-tracking-container .health-tracking-content {
+        /* Add padding to create space for the fixed illustration */
+        padding-right: 400px; /* Adjust as needed */
     }
 
     .health-tracking-form {

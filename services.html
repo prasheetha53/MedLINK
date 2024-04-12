@@ -1,94 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find A Doctor | MedLINK</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | MedLINK</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" crossorigin=""></script>
 </head>
 <body>
-    <script src="app.js"></script>
-<nav> 
-    <div class="logo">MedLINK</div> 
-        <div class="nav-items"> <a href="index.html">Home</a> <a href="services.html">Services</a> <a href="track.html">Track</a> <a href="about.html">About</a> 
-    </div> 
-</nav>
+<section class ="services-page">
+  <nav>
+    <div class="logo">MedLINK</div>
+    <div class="nav-items">
+      <a href="index.html">Home</a>
+      <a href="services.html">Services</a>
+      <a href="track.html">Track</a>
+      <a href="about.html">About</a>
+      <div class="sign-in-icon">
+        <a href="signin.html">
+          <img src="C:\Users\Prasheetha\OneDrive\Desktop\MedLINK\11029996_user_down_account_profile_icon.svg" alt="Sign-in icon">
+        </a>
+      </div>
+    </div>
+  </nav>
 
-<section class="find-doctor">
+  <section class="find-doctor">
     <div class="find-doctor-container">
-        <div class="find-doctor-illustration">
-            <img src="C:\Users\Prasheetha\OneDrive\Desktop\MedLINK\Doctors-bro.svg" alt="Find A Doctor illustration">
+            <div class="find-doctor-illustration">
+                <img src="C:\Users\Prasheetha\OneDrive\Desktop\MedLINK\Doctors-bro.svg" alt="Find A Doctor illustration">
+            </div>
+            <div class="find-doctor-content">
+                <h1>Find Nearest Doctor</h1><br>
+                <p><em>Connecting You to Expert Care</em></p><br>
+                <form class="find-doctor-form">
+                    <div class="form-field">
+                        <label for="preferred-location">Preferred Location/Pincode:</label>
+                        <input type="text" id="preferred-location" name="preferred-location" placeholder="Enter pincode">
+                    </div>
+                    <div class="form-field">
+                        <label for="select-date">Select Date:</label>
+                        <input type="date" id="select-date" name="select-date">
+                    </div>
+                    <div class="form-field">
+                        <label for="select-time">Preferred Time:</label>
+                        <input type="time" id="select-time" name="select-time">
+                    </div>
+                    <div class="form-field">
+                        <label for="select-speciality">Select Speciality:</label>
+                        <select id="select-speciality" name="select-speciality">
+                            <option value="cardiology">Cardiology</option>
+                            <option value="dermatology">Dermatology</option>
+                            <option value="ent">ENT</option>
+                            <option value="general-physician">General Physician</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="obstetrics-gynaecology">Obstetrics & Gynaecology</option>
+                            <option value="orthopaedics">Orthopaedics</option>
+                            <option value="paediatrics">Paediatrics</option>
+                        </select>
+                    </div>
+                    <button id="searchLocationBtn" type = "redirectButton" class="search-location-btn">Search location</button>
+                    <button type="submit">Submit and Confirm</button></a>
+                </form>
+            </div>
         </div>
-        <div class="find-doctor-content">
-            <h1>Find Nearest Doctor</h1><br>
-            <p><em>Connecting You to Expert Care</em></p><br>
-            <form class="find-doctor-form">
-                <div class="form-field">
-                    <label for="preferred-location">Preferred Location/Pincode:</label>
-                    <input type="text" id="preferred-location" name="preferred-location" placeholder="Enter pincode">
-                </div>
-                <div class="form-field">
-                    <label for="select-date">Select Date:</label>
-                    <input type="date" id="select-date" name="select-date">
-                </div>
-                <div class="form-field">
-                    <label for="select-time">Preferred Time:</label>
-                    <input type="time" id="select-time" name="select-time">
-                </div>
-                <div class="form-field">
-                    <label for="select-speciality">Select Speciality:</label>
-                    <select id="select-speciality" name="select-speciality">
-                        <option value="cardiology">Cardiology</option>
-                        <option value="dermatology">Dermatology</option>
-                        <option value="ent">ENT</option>
-                        <option value="general-physician">General Physician</option>
-                        <option value="neurology">Neurology</option>
-                        <option value="obstetrics-gynaecology">Obstetrics & Gynaecology</option>
-                        <option value="orthopaedics">Orthopaedics</option>
-                        <option value="paediatrics">Paediatrics</option>
-                    </select>
-                </div>
-                <button type="submit" class="search-location-btn">Search location</button>
-                <button type="submit">Submit and Confirm</button>
+  </section>
+
+  <section class="book-online-consultation">
+<div class="book-online-consultation-container">
+            <div class="book-online-consultation-content">
+                <h1>Book an Online Consultation</h1><br>
+                <p><em>Connect with top doctors for expert advice and treatment</em></p><br>
+                <form class="find-doctor-form">
+                    <div class="form-field">
+                        <label for="select-date">Select Date:</label>
+                        <input type="date" id="select-date" name="select-date">
+                    </div>
+                    <div class="form-field">
+                        <label for="select-time">Preferred Time:</label>
+                        <input type="time" id="select-time" name="select-time">
+                    </div>
+                    <div class="form-field">
+                        <label for="select-speciality">Select Speciality:</label>
+                        <select id="select-speciality" name="select-speciality">
+                            <option value="cardiology">Cardiology</option>
+                            <option value="dermatology">Dermatology</option>
+                            <option value="ent">ENT</option>
+                            <option value="general-physician">General Physician</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="obstetrics-gynaecology">Obstetrics & Gynaecology</option>
+                            <option value="orthopaedics">Orthopaedics</option>
+                            <option value="paediatrics">Paediatrics</option>
+                        </select>
+                    </div>
+                    <button type="submit">Submit and Confirm</button>
             </form>
         </div>
     </div>
-</section>
+  </section>
 
-<section class="book-online-consultation">
-    <div class="book-online-consultation-container">
-        <div class="book-online-consultation-content">
-            <h1>Book an Online Consultation</h1><br>
-            <p><em>Connect with top doctors for expert advice and treatment</em></p><br>
-            <form class="find-doctor-form">
-                <div class="form-field">
-                    <label for="select-date">Select Date:</label>
-                    <input type="date" id="select-date" name="select-date">
-                </div>
-                <div class="form-field">
-                    <label for="select-time">Preferred Time:</label>
-                    <input type="time" id="select-time" name="select-time">
-                </div>
-                <div class="form-field">
-                    <label for="select-speciality">Select Speciality:</label>
-                    <select id="select-speciality" name="select-speciality">
-                        <option value="cardiology">Cardiology</option>
-                        <option value="dermatology">Dermatology</option>
-                        <option value="ent">ENT</option>
-                        <option value="general-physician">General Physician</option>
-                        <option value="neurology">Neurology</option>
-                        <option value="obstetrics-gynaecology">Obstetrics & Gynaecology</option>
-                        <option value="orthopaedics">Orthopaedics</option>
-                        <option value="paediatrics">Paediatrics</option>
-                    </select>
-                </div>
-                <button type="submit">Submit and Confirm</button>
-            </form>
-        </div>
-    </div>
-</section>
-
-<section class="find-volunteer">
+  <section class="find-volunteer">
     <div class="find-volunteer-container">
         <div class="find-volunteer-content">
             <h1>Find A Volunteer To Help You Out</h1><br>
@@ -113,15 +123,15 @@
                     <label for="preferred-time">Preferred Time:</label>
                     <input type="time" id="preferred-time" name="preferred-time">
                 </div>
-                <button type="submit" class="search-location-btn">Search location</button>
-                <button type="submit">Submit and Confirm</button>
+                    <button id="searchLocationBtnVolunteer" type = "redirectButton" class="search-location-btn">Search location</button>
+                    <button type="submit">Submit and Confirm</button>
             </form>
         </div>
-    </div>
+  </section>
 </section>
 
 <footer class="footer">
-    <div class="footer-container">
+<div class="footer-container">
         <div class="footer-content">
             <h2 class="footer-logo">MedLINK</h2>
             <p class="footer-text">
@@ -134,5 +144,11 @@
     </div>
 </footer>
 
+
+<script src="app.js"></script>
+<script src="map.js"></script>
 </body>
 </html>
+
+
+
