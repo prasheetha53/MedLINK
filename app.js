@@ -12,6 +12,19 @@ if (getStartedButton) {
     console.error("getStartedButton element not found");
 }
 
+const trackButton = document.querySelector(".trackButton"); 
+
+// Ensure the element exists before adding event listener
+if (trackButton) {
+    // Add a click event listener to the getStartedButton
+    trackButton.addEventListener("click", () => {
+        // Redirect the user to the services page
+        window.location.href = "track.html";
+    });
+} else {
+    console.error("trackButton element not found");
+}
+
 
 // Select all the links in the navbar
 const navLinks = document.querySelectorAll("nav a");
@@ -59,6 +72,7 @@ function handleFormSubmit(e, redirectUrl) {
     // Redirect the user to the confirmation page
     window.location.href = redirectUrl;
 }
+
 
 // Add DOMContentLoaded event listener to run the function when the document content is loaded
 document.addEventListener("DOMContentLoaded", () => {
@@ -121,9 +135,7 @@ document.querySelector('.health-tracking-form').addEventListener('submit', (e) =
 
 // Function to handle form submission
 function handleFormSubmit(e, redirectUrl) {
-    // ... existing code ...
-
-    // Create weight chart
+    
     createWeightChart();
 
     // Create blood pressure chart
@@ -133,7 +145,7 @@ function handleFormSubmit(e, redirectUrl) {
     createBloodSugarChart();
 
     // Redirect the user to the confirmation page
-    window.location.href = redirectUrl;
+    window.location.href = "confirmation.html";
 }
 
 // Function to create weight chart

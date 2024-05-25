@@ -519,4 +519,50 @@ login-container { display: flex; justify-content: center; align-items: center; h
     .health-tracking-form button[type="submit"] {
         padding: 10px 15px; /* Adjust button padding for smaller screens */
     }
+
+        .login-form .form-field-responsive {
+        margin-bottom: 10px;
+    }
+
+    .login-form .submit-button-responsive {
+        padding: 10px 15px;
+        font-size: 0.8rem;
+        border: none;
+        color: hotpink;
+        background: #000;
+        cursor: pointer;
+        border-radius: 50px;
+        margin-top: 1rem;
+    }
+
+    .login-form .submit-button-responsive:hover {
+        background: #fff;
+        color: hotpink;
+    }
+}
+
+.confirmation-container { display: flex; flex-direction: column; align-items: center; justify-content: center; height: 95vh; padding: 5rem calc((100vw - 1300px) / 2); gap: 2rem; }
+
+.confirmation-container h1 { color: black; margin-bottom: 1rem; font-size: 3rem; }
+
+.confirmation-container p { margin-bottom: 3rem; font-size: 1.5rem; line-height: 1.5; text-align: center; }
+
+.trackButton { padding: 0.5rem 1.5rem; font-size: 0.8rem; border: none; color: hotpink; background: #000; cursor: pointer; border-radius: 50px; margin-top: 1rem; }
+
+.trackButton:hover { background: #fff; color: hotpink; }
+
+.sign-in-message { display: none; color: green; margin-top: 10px; }
+
+.login-form input, .login-form textarea {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: none;
+    margin-bottom: 1rem;
+}
+
+.login-form .form-field {
+    margin-bottom: 10px;
 }
