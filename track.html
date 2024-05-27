@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Health Tracking | MedLINK</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <nav>
-<div class="logo">MedLINK</div>
+        <div class="logo">MedLINK</div>
         <div class="nav-items">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
@@ -16,84 +17,83 @@
             <a href="about.html">About</a>
             <div class="sign-in-icon">
                 <a href="signin.html">
-                    <img src="C:\Users\Prasheetha\OneDrive\Desktop\MedLINK\11029996_user_down_account_profile_icon.svg" alt="Sign-in icon">
+                    <img src="C:\Users\Prasheetha\OneDrive\Desktop\MedLINK\frontend\11029996_user_down_account_profile_icon.svg" alt="Sign-in icon">
                 </a>
             </div>
         </div>
     </nav>
     <section class="health-tracking-container">
-                <div class="health-tracking-illustration">
-            <img src="C:\Users\Prasheetha\OneDrive\Desktop\MedLINK\Rheumatology-amico.svg" alt="Health tracking illustration">
+        <div class="health-tracking-illustration">
+            <img src="C:\Users\Prasheetha\OneDrive\Desktop\MedLINK\frontend\Rheumatology-amico.svg" alt="Health tracking illustration">
         </div>
         <div class="health-tracking-content">
             <h1>Enter Your Health Logs</h1>
             <p>Your Data Our Responsibility</p>
-            <form class="health-tracking-form">
+            <form class="health-tracking-form" id="healthTrackingForm">
                 <div class="form-field">
                     <label for="weight">Enter Weight</label>
-                    <input type="number" id="weight" name="weight" step="0.1" placeholder="Enter weight in kg">
+                    <input type="number" id="weightInput" name="weight" step="0.1" placeholder="Enter weight in kg">
                 </div>
                 <div class="form-field">
-    <label for="height">Enter Height</label>
-    <input type="number" id="height" name="height" step="0.1" placeholder="Enter height in cm">
-        </div>
-        <div class="form-field">
-            <label for="bloodPressureSystolic">Enter Systolic Pressure</label>
-            <input type="number" id="bloodPressureSystolic" name="blood-pressure-systolic" step="1" placeholder="Enter systolic pressure in mmHg">
-        </div>
-        <div class="form-field">
-            <label for="bloodPressureDiastolic">Enter Diastolic Pressure</label>
-            <input type="number" id="bloodPressureDiastolic" name="blood-pressure-diastolic" step="1" placeholder="Enter diastolic pressure in mmHg">
-        </div>
-        <div class="form-field">
-            <label for="bloodSugar">Enter Blood Sugar (mmol/L)</label>
-            <input type="number" id="bloodSugar" name="blood-sugar" step="0.1" placeholder="Enter blood sugar level">
-        </div>
-        <div class="form-field">
-            <label for="heartRate">Enter Heart rate</label>
-            <input type="number" id="heartRate" name="heart-rate" step="1" placeholder="Enter heart rate per minute">
-        </div>
-        <div class="form-field">
-            <label for="exerciseHours">Enter Exercise Hours</label>
-            <input type="number" id="exerciseHours" name="exercise-hours" step="0.1" placeholder="Enter exercise hours per day">
-        </div>
-        <div class="form-field">
-            <label for="sleepData">Enter Sleep data</label>
-            <input type="text" id="sleepData" name="sleep-data" placeholder="Enter sleep data in hours">
-        </div>
-        <div class="form-field">
-            <label for="allergies">Enter Allergies</label>
-            <input type="text" id="allergies" name="allergies" placeholder="Enter any allergies">
-        </div>
-        <div class="form-field">
-            <label for="chronicConditions">Enter Chronic conditions (if any)</label>
-            <input type="text" id="chronicConditions" name="chronic-conditions" placeholder="Enter any chronic conditions">
-        </div>
-        <div class="form-field">
-            <label for="surgicalHistory">Enter Surgical History</label>
-            <input type="text" id="surgicalHistory" name="surgical-history" placeholder="Enter surgical history">
-        </div>
-        <div class="form-field">
-            <label for="medicationsList">Enter Medications List (current and past)</label>
-            <input type="text" id="medicationsList" name="medications-list" placeholder="Enter medications list">
-        </div>
-        <div class="form-field">
-            <label for="bodyFat">Enter Body fat %</label>
-            <input type="number" id="bodyFat" name="body-fat" step="0.1" placeholder="Enter body fat %">
-        </div>
-        <div class="form-field">
-            <label for="muscleMass">Enter Muscle Mass %</label>
-            <input type="number" id="muscleMass" name="muscle-mass" step="0.1" placeholder="Enter muscle mass %">
-        </div>
+                    <label for="height">Enter Height</label>
+                    <input type="number" id="height" name="height" step="0.1" placeholder="Enter height in cm">
+                </div>
+                <div class="form-field">
+                    <label for="bloodPressureSystolic">Enter Systolic Pressure</label>
+                    <input type="number" id="systolicInput" name="bloodPressureSystolic" step="1" placeholder="Enter systolic pressure in mmHg">
+                </div>
+                <div class="form-field">
+                    <label for="bloodPressureDiastolic">Enter Diastolic Pressure</label>
+                    <input type="number" id="diastolicInput" name="bloodPressureDiastolic" step="1" placeholder="Enter diastolic pressure in mmHg">
+                </div>
+                <div class="form-field">
+                    <label for="bloodSugar">Enter Blood Sugar (mmol/L)</label>
+                    <input type="number" id="bloodSugarInput" name="bloodSugar" step="0.1" placeholder="Enter blood sugar level">
+                </div>
+                <div class="form-field">
+                    <label for="heartRate">Enter Heart rate</label>
+                    <input type="number" id="heartRate" name="heartRate" step="1" placeholder="Enter heart rate per minute">
+                </div>
+                <div class="form-field">
+                    <label for="exerciseHours">Enter Exercise Hours</label>
+                    <input type="number" id="exerciseHours" name="exerciseHours" step="0.1" placeholder="Enter exercise hours per day">
+                </div>
+                <div class="form-field">
+                    <label for="sleepData">Enter Sleep data</label>
+                    <input type="text" id="sleepData" name="sleepData" placeholder="Enter sleep data in hours">
+                </div>
+                <div class="form-field">
+                    <label for="allergies">Enter Allergies</label>
+                    <input type="text" id="allergies" name="allergies" placeholder="Enter any allergies">
+                </div>
+                <div class="form-field">
+                    <label for="chronicConditions">Enter Chronic conditions (if any)</label>
+                    <input type="text" id="chronicConditions" name="chronicConditions" placeholder="Enter any chronic conditions">
+                </div>
+                <div class="form-field">
+                    <label for="surgicalHistory">Enter Surgical History</label>
+                    <input type="text" id="surgicalHistory" name="surgicalHistory" placeholder="Enter surgical history">
+                </div>
+                <div class="form-field">
+                    <label for="medicationsList">Enter Medications List (current and past)</label>
+                    <input type="text" id="medicationsList" name="medicationsList" placeholder="Enter medications list">
+                </div>
+                <div class="form-field">
+                    <label for="bodyFat">Enter Body fat %</label>
+                    <input type="number" id="bodyFat" name="bodyFat" step="0.1" placeholder="Enter body fat %">
+                </div>
+                <div class="form-field">
+                    <label for="muscleMass">Enter Muscle Mass %</label>
+                    <input type="number" id="muscleMass" name="muscleMass" step="0.1" placeholder="Enter muscle mass %">
+                </div>
                 <button type="submit">Submit</button>
-                <canvas id="weightChart"></canvas>
-                <canvas id="bloodPressureChart"></canvas>
-                <canvas id="bloodSugarChart"></canvas>
             </form>
+            <canvas id="weightChart"></canvas>
+            <canvas id="bloodPressureChart"></canvas>
+            <canvas id="bloodSugarChart"></canvas>
         </div>
     </section>
     <script src="app.js"></script>
 </body>
 </html>
-
 
